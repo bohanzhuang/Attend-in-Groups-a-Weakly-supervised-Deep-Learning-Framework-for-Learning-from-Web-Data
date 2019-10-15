@@ -1,0 +1,54 @@
+# If want to input None, use !!null
+
+# Resume Training, start from scratch or resume training
+resume_train: False
+load_epoch: 2
+fine_tune: False
+
+# Learning Parameters
+n_epochs: 10
+n_iters: 10000
+learning_rate: 0.001 # def:0.01
+lr_policy: step  # def: step or auto
+lr_adapt_threshold: 0.01
+lr_step: [5, 10]  # def: 20, learning rate will be reduced by 10 times at these steps
+
+# Data
+use_data_layer: False
+rand_crop: False # def: True
+shuffle: True
+para_load: False
+batch_crop_mirror: False  # if False, do randomly on each image separately
+
+# Momentum
+use_momentum : True # def: True
+use_nesterov_momentum: False # def: False
+momentum: 0.9 # def: 0.9
+
+# Weight Decay 
+weight_decay: 0.0005 # def: 0.0005
+
+# Directories
+label_folder: ./preprocessed_data/labels/
+mean_file: ./preprocessed_data/img_mean.npy
+finetune_weights_dir: ./pretrained_model/model.npy
+train_folder: /home/bohan/Documents/data/cars/web_data/
+val_folder: /home/bohan/Documents/data/cars/data/test_images/
+weights_dir: ./weights/
+
+
+# conv library
+lib_conv: cudnn  # or cudaconvnet
+
+snapshot_freq: 1  # frequency of saving weights
+print_train_error: True
+print_freq: 20  # frequency of printing training error rate
+
+# GPU 
+gpu: 'gpu3'
+sock_data: 5001
+
+train_batch_size: 32   #number of bags
+test_batch_size: 64    # number of samples
+bag_size: 2
+
