@@ -15,7 +15,7 @@ year = {2017}
 
 ## Dataset
 We provide the WebCars dataset here 
- https://drive.google.com/file/d/0B8FVP4UlazP8Q2N0czB3aFNVWk0/view?usp=sharing
+https://mega.nz/file/rZpTVZbD#tleS-mP7XnIO2-_RoxYcO_hUfveURh5XkdGUhQ8fLAM
 
 ## Code
 The code are written using Lasagne.
